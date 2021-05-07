@@ -1,10 +1,11 @@
 from django.db.models import signals
 from django.utils.deprecation import MiddlewareMixin
- from functools import partial
+from functools import partial
 
 from audit_log import registration, settings
 from audit_log.models import fields
 from audit_log.models.managers import AuditLogManager
+
 
 def _disable_audit_log_managers(instance):
     for attr in dir(instance):
