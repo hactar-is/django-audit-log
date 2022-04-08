@@ -2,13 +2,12 @@ from __future__ import unicode_literals
 
 import copy
 import datetime
-from django.db import models
-from django.utils.translation import ugettext_lazy as _
-from django.conf import settings
 
-from audit_log.models.fields import LastUserField
 from audit_log import settings as local_settings
-
+from audit_log.models.fields import LastUserField
+from django.conf import settings
+from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 try:
     from django.utils.timezone import now as datetime_now

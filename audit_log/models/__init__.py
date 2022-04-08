@@ -1,6 +1,9 @@
+from audit_log.models.fields import (CreatingSessionKeyField,
+                                     CreatingUserField, LastSessionKeyField,
+                                     LastUserField)
 from django.db.models import Model
-from django.utils.translation import ugettext_lazy as _
-from audit_log.models.fields import CreatingUserField, CreatingSessionKeyField, LastUserField, LastSessionKeyField
+from django.utils.translation import gettext_lazy as _
+
 
 class AuthStampedModel(Model):
 	"""
